@@ -14,7 +14,7 @@ All on the webpage are open domain and come from:
 * [Various fungi illustrations](https://commons.wikimedia.org/wiki/Category:Albin_Schmalfuß) (~1897) by Albin Schmalfuß
 
 ## Features
-* Prediction results with 99.9% accuracy on test data
+* The network predicts at 100% accuracy on test data
 * * These results have not been assessed by field experts
 * * See NOTE below
 * Responsive design for easy and intuitive feature entry
