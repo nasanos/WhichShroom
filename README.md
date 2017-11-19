@@ -15,6 +15,8 @@ All on the webpage are open domain and come from:
 
 ## Features
 * Prediction results with 99.9% accuracy on test data
+* * These results have not been assessed by field experts
+* * See NOTE below
 * Responsive design for easy and intuitive feature entry
 
 ## To Do
@@ -22,4 +24,4 @@ All on the webpage are open domain and come from:
 * * At this time, only the cap-related features have images
 * Continue testing on various browsers and devices for design continuity and responsiveness
 
-## \*NOTE: Do not rely on this application for determining the safety of fungi. Its results have not been verified by subject-matter experts. Regardless of the application's predictions, its developer is not liable for any damages resulting from ingestion or otherwise of fungi.
+## NOTE: Do not rely on this application for determining the safety of fungi. Its results have not been verified by subject-matter experts. Regardless of the application's predictions, its developer is not liable for any damages resulting from ingestion or otherwise of fungi.
