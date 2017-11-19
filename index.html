@@ -15,11 +15,8 @@
 
     <nav class="navbar-fixed black white-text">
         <div class="row">
-            <div class="col s9">
+            <div class="col s12">
                 <span class="title">Which-shroom?</span>
-            </div>
-            <div id="page_footer" class="col s3">
-                &copy; Nasanos, 2017
             </div>
         </div>
     </nav>
@@ -32,9 +29,9 @@
         </div>
         <div class="row">
             <div id="prediction" class="col s7 offset-s3 z-depth-2">
-                <span id="pred_text" class="label pred_display">Should you...</span>
+                <span id="pred_text" class="label pred_display">Is it...</span>
                 <button id="prediction_button" class="col s12 center btn white">
-                  Eat It?
+                  Edible?
                 </div>
             </div>
         </div>
@@ -48,11 +45,11 @@
                     <div class="col s2 center">
                         <span class="label">Cap</span>
                     </div>
-                    <div class="col s3" align="center">
-                        <img id="cap-shape_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="cap-shape_dropdown">
-                            Shape
-                        </button>
+                    <div class="col s3">
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="cap-shape_dropdown">
+                            <img id="cap-shape_img" class="circle responsive-img" src="imgs/blank.jpg"/>
+                        </a>
+                        <span class="button_label">Shape</span>
                         <ul id="cap-shape_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="capshape_select(1)">Bell</a></li>
                             <li><a href="#!" onclick="capshape_select(2)">Conical</a></li>
@@ -63,10 +60,10 @@
                         </ul>
                     </div>
                     <div class="col s3" align="center">
-                        <img id="cap-surface_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="cap-surface_dropdown">
-                            Surface
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="cap-surface_dropdown">
+                            <img id="cap-surface_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/>
+                        </a>
+                        <span class="button_label">Surface</span>
                         <ul id="cap-surface_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="capsurface_select(7)">Fibrous</a></li>
                             <li><a href="#!" onclick="capsurface_select(8)">Grooved</a></li>
@@ -75,10 +72,10 @@
                         </ul>
                     </div>
                     <div class="col s3" align="center">
-                        <img id="cap-color_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="cap-color_dropdown">
-                            Color
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="cap-color_dropdown">
+                            <img id="cap-color_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/>
+                        </a>
+                        <span class="button_label">Color</span>
                         <ul id="cap-color_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="capcolor_select(15)">Brown</a></li>
                             <li><a href="#!" onclick="capcolor_select(11)">Buff</a></li>
@@ -104,20 +101,20 @@
                         <span class="label">Gills</span>
                     </div>
                     <div class="col s3 offset-s1" align="center">
-                        <img id="gill-size_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="gill-size_dropdown">
-                            Size
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="gill-size_dropdown">
+                            <img id="gill-size_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        </a>
+                        <span class="button_label">Size</span>
                         <ul id="gill-size_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="gillsize_select(21)">Broad</a></li>
                             <li><a href="#!" onclick="gillsize_select(22)">Narrow</a></li>
                         </ul>
                     </div>
                     <div class="col s3 offset-s1" align="center">
-                        <img id="gill-spacing_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="gill-spacing_dropdown">
-                            Spacing
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="gill-spacing_dropdown">
+                            <img id="gill-spacing_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        </a>
+                        <span class="button_label">Spacing</span>
                         <ul id="gill-spacing_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="gillspacing_select(23)">Close</a></li>
                             <li><a href="#!" onclick="gillspacing_select(24)">Crowded</a></li>
@@ -135,10 +132,10 @@
                         <span class="label">Stalk</span>
                     </div>
                     <div class="col s3 offset-s3" align="center">
-                        <img id="bruisting_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="bruising_dropdown">
-                            Bruises
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="bruising_dropdown">
+                            <img id="bruisting_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        </a>
+                        <span class="button_label">Bruises</span>
                         <ul id="bruising_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="bruising_select(26)">Yes</a></li>
                             <li><a href="#!" onclick="bruising_select(25)">No</a></li>
@@ -156,10 +153,10 @@
                         <span class="label">Env</span>
                     </div>
                     <div class="col s3 offset-s1" align="center">
-                        <img id="habitat_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="habitat_dropdown">
-                            Habitat
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="habitat_dropdown">
+                            <img id="habitat_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        </a>
+                        <span class="button_label">Habitat</span>
                         <ul id="habitat_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="habitat_select(28)">Grassy</a></li>
                             <li><a href="#!" onclick="habitat_select(29)">Leafy</a></li>
@@ -171,10 +168,10 @@
                         </ul>
                     </div>
                     <div class="col s3 offset-s1" align="center">
-                        <img id="population_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
-                        <button class="dropdown-button btn white" data-activates="population_dropdown">
-                            Population
-                        </button>
+                        <a class="btn-floating btn-large dropdown-button white" data-activates="population_dropdown">
+                            <img id="population_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        </a>
+                        <span class="button_label">Population</span>
                         <ul id="population_dropdown" class="dropdown-content">
                             <li><a href="#!" onclick="population_select(34)">Abundant</a></li>
                             <li><a href="#!" onclick="population_select(35)">Clustered</a></li>
@@ -190,6 +187,9 @@
             <!-- End Environment -->
 
         </div> <!-- End Carousel -->
+        <div id="page_footer">
+            &copy; Nasanos, 2017
+        </div>
     </div> <!-- End Container -->
     <script type="text/javascript" src="scripts/init.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>

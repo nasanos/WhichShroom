@@ -46,6 +46,11 @@ img {
   color: #ffffff;
 }
 
+.button_label {
+    border-bottom: 0.1em solid #c9c9c9;
+    color: #000000;
+}
+
 .circle {
   margin-bottom: 1em;
 }
@@ -61,12 +66,14 @@ img {
 }
 
 #page_footer {
+    position: absolute;
+    bottom: 0;
     font-size: 0.65em;
     color: #c9c9c9;
 }
 
 .carousel-slider {
-    height: 60vh !important;
+    height: 40vh !important;
 }
 
 .indicator-item {
