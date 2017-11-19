@@ -1,0 +1,198 @@
+<html>
+<head>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+    <title>Which-shroom?</title>
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/3.16.5/math.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="scripts/materialize.min.js"></script>
+    <link href="styles/materialize.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Begin Header -->
+
+    <nav class="navbar-fixed black white-text">
+        <div class="row">
+            <div class="col s9">
+                <span class="title">Which-shroom?</span>
+            </div>
+            <div id="page_footer" class="col s3">
+                &copy; Nasanos, 2017
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Header -->
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div id="prediction" class="col s7 offset-s3 z-depth-2">
+                <span id="pred_text" class="label pred_display">Should you...</span>
+                <button id="prediction_button" class="col s12 center btn white">
+                  Eat It?
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel carousel-slider center" data-indicators="true">
+
+            <!-- Begin Cap -->
+
+            <div class="carousel-item" href="#one!">
+                <div class="row">
+                    <div class="col s2 center">
+                        <span class="label">Cap</span>
+                    </div>
+                    <div class="col s3" align="center">
+                        <img id="cap-shape_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="cap-shape_dropdown">
+                            Shape
+                        </button>
+                        <ul id="cap-shape_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="capshape_select(1)">Bell</a></li>
+                            <li><a href="#!" onclick="capshape_select(2)">Conical</a></li>
+                            <li><a href="#!" onclick="capshape_select(6)">Convex</a></li>
+                            <li><a href="#!" onclick="capshape_select(3)">Flat</a></li>
+                            <li><a href="#!" onclick="capshape_select(4)">Knobbed</a></li>
+                            <li><a href="#!" onclick="capshape_select(5)">Sunken</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3" align="center">
+                        <img id="cap-surface_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="cap-surface_dropdown">
+                            Surface
+                        </button>
+                        <ul id="cap-surface_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="capsurface_select(7)">Fibrous</a></li>
+                            <li><a href="#!" onclick="capsurface_select(8)">Grooved</a></li>
+                            <li><a href="#!" onclick="capsurface_select(10)">Scaly</a></li>
+                            <li><a href="#!" onclick="capsurface_select(9)">Smooth</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3" align="center">
+                        <img id="cap-color_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="cap-color_dropdown">
+                            Color
+                        </button>
+                        <ul id="cap-color_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="capcolor_select(15)">Brown</a></li>
+                            <li><a href="#!" onclick="capcolor_select(11)">Buff</a></li>
+                            <li><a href="#!" onclick="capcolor_select(12)">Cinnamon</a></li>
+                            <li><a href="#!" onclick="capcolor_select(14)">Gray</a></li>
+                            <li><a href="#!" onclick="capcolor_select(17)">Green</a></li>
+                            <li><a href="#!" onclick="capcolor_select(16)">Pink</a></li>
+                            <li><a href="#!" onclick="capcolor_select(18)">Purple</a></li>
+                            <li><a href="#!" onclick="capcolor_select(13)">Red</a></li>
+                            <li><a href="#!" onclick="capcolor_select(19)">White</a></li>
+                            <li><a href="#!" onclick="capcolor_select(20)">Yellow</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Cap -->
+            <!-- Begin Gills -->
+
+            <div class="carousel-item" href="#two!">
+                <div class="row">
+                    <div class="col s2 center">
+                        <span class="label">Gills</span>
+                    </div>
+                    <div class="col s3 offset-s1" align="center">
+                        <img id="gill-size_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="gill-size_dropdown">
+                            Size
+                        </button>
+                        <ul id="gill-size_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="gillsize_select(21)">Broad</a></li>
+                            <li><a href="#!" onclick="gillsize_select(22)">Narrow</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3 offset-s1" align="center">
+                        <img id="gill-spacing_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="gill-spacing_dropdown">
+                            Spacing
+                        </button>
+                        <ul id="gill-spacing_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="gillspacing_select(23)">Close</a></li>
+                            <li><a href="#!" onclick="gillspacing_select(24)">Crowded</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Gills -->
+            <!-- Begin Condition -->
+
+            <div class="carousel-item" href="#three!">
+                <div class="row">
+                    <div class="col s2 center">
+                        <span class="label">Stalk</span>
+                    </div>
+                    <div class="col s3 offset-s3" align="center">
+                        <img id="bruisting_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="bruising_dropdown">
+                            Bruises
+                        </button>
+                        <ul id="bruising_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="bruising_select(26)">Yes</a></li>
+                            <li><a href="#!" onclick="bruising_select(25)">No</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Condition -->
+            <!-- Begin Environment -->
+
+            <div class="carousel-item" href="#four!">
+                <div class="row">
+                    <div class="col s2 center">
+                        <span class="label">Env</span>
+                    </div>
+                    <div class="col s3 offset-s1" align="center">
+                        <img id="habitat_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="habitat_dropdown">
+                            Habitat
+                        </button>
+                        <ul id="habitat_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="habitat_select(28)">Grassy</a></li>
+                            <li><a href="#!" onclick="habitat_select(29)">Leafy</a></li>
+                            <li><a href="#!" onclick="habitat_select(30)">Meadow</a></li>
+                            <li><a href="#!" onclick="habitat_select(31)">Path</a></li>
+                            <li><a href="#!" onclick="habitat_select(32)">Urban</a></li>
+                            <li><a href="#!" onclick="habitat_select(33)">Waste</a></li>
+                            <li><a href="#!" onclick="habitat_select(27)">Woods</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3 offset-s1" align="center">
+                        <img id="population_img" class="circle responsive-img z-depth-2" src="imgs/blank.jpg"/><br/>
+                        <button class="dropdown-button btn white" data-activates="population_dropdown">
+                            Population
+                        </button>
+                        <ul id="population_dropdown" class="dropdown-content">
+                            <li><a href="#!" onclick="population_select(34)">Abundant</a></li>
+                            <li><a href="#!" onclick="population_select(35)">Clustered</a></li>
+                            <li><a href="#!" onclick="population_select(36)">Numerous</a></li>
+                            <li><a href="#!" onclick="population_select(37)">Scattered</a></li>
+                            <li><a href="#!" onclick="population_select(38)">Several</a></li>
+                            <li><a href="#!" onclick="population_select(39)">Solitary</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Environment -->
+
+        </div> <!-- End Carousel -->
+    </div> <!-- End Container -->
+    <script type="text/javascript" src="scripts/init.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/input.js"></script>
+</body>
+</html>
