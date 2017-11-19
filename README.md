@@ -5,7 +5,7 @@
 
 The application is a result of two development paths.
 
-The first is the neural network's training. I conducted this in TensorFlow using Python, and the script can be found in this repository. The mushroom feature data was provided by UCI Machine Learning, [made available on Kaggle](https://www.kaggle.com/uciml/mushroom-classification) under the CC0: Public Domain license.
+The first is the neural network's training. I conducted this in TensorFlow using Python, and the script can be found in this repository as a Jupyter notebook. The mushroom feature data was provided by UCI Machine Learning, [made available on Kaggle](https://www.kaggle.com/uciml/mushroom-classification) under the CC0: Public Domain license.
 
 The second is the frontend, where you can use the result of that training. The webpage contains the necessary neural network componments in Javascript (with the help of Math.js), making for a minimal and responsive implementation. Beyond that, the frontend uses Materialize CSS and numerous layers of interactivity for a dynamic and responsive experience.
 
