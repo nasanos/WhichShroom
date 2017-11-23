@@ -37,7 +37,7 @@ img {
 .label {
   margin: 1em 0;
   border-bottom: 0.25em solid #c9c9c9;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bolder;
 }
 .label:hover {
@@ -73,7 +73,7 @@ img {
 }
 
 .carousel-slider {
-    height: 40vh !important;
+    height: 60vh !important;
 }
 
 .indicator-item {
