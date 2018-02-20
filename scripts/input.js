@@ -30,7 +30,7 @@ $(".feature_button").on("click", (e) => {
             if (e.target.id == curr_feature_map.id + "-" + curr_key.id) {
                 feature_select(curr_feature_map.range, curr_key.feat_loc);
 
-                $(curr_feature_map.id + "_btn").html(curr_key.id);
+                $("#" + curr_feature_map.id + "_btn").html(curr_key.id);
             }
         }
     }

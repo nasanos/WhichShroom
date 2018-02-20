@@ -3,7 +3,7 @@ for (i=0; i<feature_map.length; i++) {
     let curr_feature_map = feature_map[i];
 
     html_buffer.push(`
-        <div id="`+ curr_feature_map.id +`_div" class="col s3" align="center">
+        <div id="`+ curr_feature_map.id +`_div" class="col s6 m4 offset-m2">
             <a id="`+ curr_feature_map.id +`_btn" class="btn-floating btn-large dropdown-button black" href="#" data-activates="` + curr_feature_map.id + `_dropdown" data-beloworigin="true">
                 <i class="large material-icons">add</i>
             </a>

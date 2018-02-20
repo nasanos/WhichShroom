@@ -18,10 +18,6 @@ button:hover {
   color: #ffffff !important;
 }
 
-img {
-    max-height: 200px !important;
-}
-
 .title {
     margin: 1em 0;
     border-bottom: 0.1em double #c9c9c9;
@@ -55,6 +51,10 @@ img {
   margin-bottom: 1em;
 }
 
+.btn-large {
+  margin-bottom: 1em;
+}
+
 #prediction {
   padding: 1em;
   padding-top: 3em;
@@ -66,7 +66,7 @@ img {
 }
 
 #page_footer {
-    position: relative;
+    position: absolute;
     bottom: 1em;
     font-size: 0.65em;
     color: #c9c9c9;
