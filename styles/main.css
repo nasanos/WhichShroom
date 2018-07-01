@@ -40,7 +40,7 @@ button:hover {
     margin: 1em 0;
     border-bottom: 0.1em double #c9c9c9;
     font-family: Script12, Arial sans-serif;
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: bolder;
     color: #000000;
 }
@@ -70,7 +70,7 @@ button:hover {
     margin-left: 1em;
     border-bottom: 0.1em solid #c9c9c9;
     color: #000000;
-    font-size: 1.5em
+    font-size: 1.25em
 }
 
 .circle {
