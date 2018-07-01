@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Script12";
-  src: url("../resources/script12-bt/ScriptBTRoman.ttf")
+  src: url("../resources/script12-bt/Scrpt12N.ttf")
 }
 
 html {
@@ -23,6 +23,14 @@ button:hover {
   color: #ffffff !important;
 }
 
+.material-icons:hover {
+  color: #000000 !important;
+}
+.btn-floating:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
 .navbar-fixed {
     box-shadow: none;
     border: none;
@@ -32,9 +40,8 @@ button:hover {
     margin: 1em 0;
     border-bottom: 0.1em double #c9c9c9;
     font-family: Script12, Arial sans-serif;
-    font-size: 2em;
+    font-size: 3.5em;
     font-weight: bolder;
-    /*font-style: oblique;*/
     color: #000000;
 }
 .title:hover {
@@ -53,9 +60,16 @@ button:hover {
   color: #ffffff;
 }
 
+.modal_label {
+  margin: 1em 0;
+  font-size: 1.75em;
+  font-weight: bolder;
+}
+
 .button_label {
     border-bottom: 0.1em solid #c9c9c9;
     color: #000000;
+    font-size: 1.5em
 }
 
 .circle {
@@ -69,7 +83,7 @@ button:hover {
 #prediction {
   padding: 1em;
   padding-top: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   text-align: center;
 }
 

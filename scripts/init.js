@@ -1,13 +1,17 @@
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
 html_buffer = [];
 for (i=0; i<feature_map.length; i++) {
     let curr_feature_map = feature_map[i];
-
+    
     html_buffer.push(`
-        <div id="`+ curr_feature_map.id +`_div" class="col s6 m4 offset-m2">
+        <div id="`+ curr_feature_map.id +`_div" class="col s6 offset-s3 m4 offset-m5">
             <a id="`+ curr_feature_map.id +`_btn" class="btn-floating btn-large dropdown-button black" href="#" data-activates="` + curr_feature_map.id + `_dropdown" data-beloworigin="true">
-                <i class="large material-icons">add</i>
+                <i id="`+ curr_feature_map.id +`_icon" class="large material-icons">add</i>
             </a>
-            <span class="button_label">` + curr_feature_map.name + `</span>
+            <span id="`+ curr_feature_map.id +`_label" class="button_label">` + curr_feature_map.name + `</span>
         </div>
     `);
 }

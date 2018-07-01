@@ -22,7 +22,7 @@
         <div class="row">
             <div id="prediction" class="col s12 m8 offset-m2">
                 <div class="row">
-                    <span id="pred_text" class="col s4 offset-s4 label pred_display">Is it...</span>
+                    <span id="pred_text" class="col s8 offset-s2 label pred_display">Is it...</span>
                     <button id="prediction_button" class="col s4 offset-s4 center btn white">
                         Edible?
                     </button>
@@ -31,8 +31,29 @@
         </div>
 
         <div id="content_body" class="row"></div>
-        <div id="page_footer">
-            &copy; Nasanos, 2018
+        
+        <div class="row">
+            <div class="col s4">
+                <a class="modal-trigger" href="#disclaimer_modal">Disclaimer</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4 offset-s8" id="page_footer">
+                &copy; Nasanos, 2018
+            </div>
+        </div>
+        
+        <div id="disclaimer_modal" class="modal">
+            <div class="modal-content">
+                <span class="modal_label">Disclaimer</span>
+                <hr/>
+                <span class="modal_body">
+                    Do not rely on this application for determining the safety of any fungi. The application's results have not been validated by subject-matter experts, and its author makes no claims as to the accuracy of the results in identifying fungi toxicity. Regardless the application's predictions, the application's author is not liable for any damages or other effects pertaining to the ingestion or otherwise of fungi.
+                </span>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-close btn-flat" href="#">Okay</a>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="scripts/main.js"></script>
