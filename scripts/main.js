@@ -1,11 +1,15 @@
+//import * as tf from '@tensorflow/tfjs';
+
 // Model setup
 var features = Array.apply(null, Array(31)).map(Number.prototype.valueOf, 0);
 
-const model = new KerasJS.Model({
-    filepath: "data/MushroomClassification.bin",
-    filesystem: true,
-    gpu: false
-});
+let model;
+const modelSetup = async () => {
+    model = await tf.loadLayersModel("data/MushroomClassification/model.json");
+
+    model.predict(tf.zeros([1, 31])).dispose();
+}
+modelSetup();
 
 // General functions
 const sigmoid = (x) => {
@@ -20,10 +24,21 @@ const feature_select = (feat_range, feat_loc) => {
     features[feat_range[0]+feat_loc] = 1;
 }
 
+// Prediction-handling funcitons
+const make_prediction = (features) => {
+    let prediction_results = model.predict(tf.tensor([features]));
+
+    print_results(prediction_results.dataSync());
+    reset_features();
+}
+
 const print_results = (result) => {
+    console.log(features);
+    console.log(result);
+
     if (result[0] > 0.5) {
         let result_percentage = Math.round((result[0] > 1 ? 1.0 : (result[0] - 0.5)/0.5) * 100)
-        $("#pred_text").html("Pretty sure it's edible:<br/>" + result_percentage + "% sure.");
+        $("#pred_text").html("Likely edible:<br/>" + result_percentage + "% sure.");
     } else {
         let result_percentage = Math.round((result[0] < 0 ? 1.0 : 1 - (result[0]/0.5)) * 100)
         $("#pred_text").html("Probably poisonous:<br/>" + result_percentage + "% sure.");
@@ -32,12 +47,12 @@ const print_results = (result) => {
 
 const reset_features = () => {
     features = Array.apply(null, Array(31)).map(Number.prototype.valueOf, 0);
-    
+
     for (i=0; i<feature_map.length; i++) {
         let curr_feature_map = feature_map[i];
-        
+
         $("#" + curr_feature_map.id + "_icon").html("add");
-        $("#" + curr_feature_map.id + "_btn").toggleClass("green black");
+        $("#" + curr_feature_map.id + "_btn").toggleClass("black green", true);
         $("#" + curr_feature_map.id + "_label").html(curr_feature_map.name);
     }
 }
