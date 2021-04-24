@@ -1,3 +1,5 @@
+**NOTE:** Unfortunately, Kera.js, which this project uses to work with the trained neural network in the browser, is no longer active. In the background, it has started using TensorFlow.js, which breaks the project's ability to make predictions. Right now, I'm looking into how to fix the issue and hope to get it working again when I get the time.
+
 # Which-Shroom
 
 ## What It Is
