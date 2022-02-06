@@ -10,7 +10,7 @@ But one of this application's other notable achievements is that it doesn't need
 
 Perfect, in other words, for usage out in the field where connectively is likely to be spotty at best.
 
-**Note**
+### Note
 
 Please see the disclaimer further below. This application has not been tested or in any way vetted by experts in mushroom toxicity, and by no means should it be used to decide whether you or anyone else should actually ingest a given mushroom.
 
