@@ -36,12 +36,18 @@ const print_results = (result) => {
     console.log(features);
     console.log(result);
 
-    if (result[0] > 0.5) {
-        let result_percentage = Math.round((result[0] > 1 ? 1.0 : (result[0] - 0.5)/0.5) * 100)
-        $("#pred_text").html("Likely edible:<br/>" + result_percentage + "% sure.");
+    // Get a percentage of certainty, based on the result's distance from 0.5.
+    let result_percentage = result[0] < 1 && result[0] > 0 ? Math.round(Math.abs(0.5 - result[0]) * 2 * 100) : 100;
+
+    // Categorize the result as either edible (1), poisonous (0), or uncertain (0.5).
+    let result_edible = result_percentage > 20 ? Math.round(result[0]) : 0.5;
+
+    if (result_edible === 1) {
+        $("#pred_text").html("Likely edible 👍<br/>" + result_percentage + "% sure");
+    } else if (result_edible === 0) {
+        $("#pred_text").html("Probably poisonous ☠️<br/>" + result_percentage + "% sure");
     } else {
-        let result_percentage = Math.round((result[0] < 0 ? 1.0 : 1 - (result[0]/0.5)) * 100)
-        $("#pred_text").html("Probably poisonous:<br/>" + result_percentage + "% sure.");
+        $("#pred_text").html("Really not sure 👽<br/>It could go either way"); // Or 🤔 or 😕
     }
 }
 
